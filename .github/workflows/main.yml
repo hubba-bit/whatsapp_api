@@ -20,11 +20,12 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - uses: actions/checkout@v1
-      - uses: subosito/flutter-action@v1.3.2
+      - uses: actions/setup-java@v1
         with:
-          # The Flutter version to make available on the path
-          channel: 'stable' # optional      
-      - name: Flutter Get Packages
+          java-version: '12.x'
+      - uses: subosito/flutter-action@v1
+        with:
+          channel: 'stable' # or: 'dev' or 'beta'
       - run: flutter pub get
-      - name: Flutter Build APK
+      - run: flutter test
       - run: flutter build apk
