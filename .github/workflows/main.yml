@@ -24,7 +24,8 @@ jobs:
         with:
           # The Flutter version to make available on the path
           channel: 'stable' # optional      
-      
+      - run: flutter pub get
+      - run: flutter build apk
 #     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
 #     - uses: actions/checkout@v2
 
