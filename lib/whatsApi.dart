@@ -103,6 +103,7 @@ class WhatsApiPage extends StatelessWidget {
                     selectorTextStyle: TextStyle(color: Colors.grey),
                     initialValue: _number,
                     textFieldController: numberContainer,
+                    selectorType: PhoneInputSelectorType.DIALOG,
                     inputBorder: OutlineInputBorder(),
                     autoFocus: false,
                   ),
